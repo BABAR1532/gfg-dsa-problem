@@ -1,0 +1,23 @@
+class Solution{
+public:	
+	
+	int onlyFirstAndLastAreSet(long long int n) { 
+	    //complete the function here
+	    // If NUMBER IS 0;
+	   if(!(n & 1))
+	   {
+	       return 0;
+	   }
+	   // then shifting n
+	   n = n >> 1;
+	   while(n > 1)
+	   {
+	       // check every number until 1.
+	       if(n & 1)
+	       return 0;
+	       n = n >> 1;
+	   }
+	   // After running loop if n == 1
+	   return n == 1;
+	  
+	}

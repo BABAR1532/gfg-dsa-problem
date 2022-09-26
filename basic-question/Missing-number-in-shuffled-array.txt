@@ -1,0 +1,27 @@
+
+class Solution{
+    public:
+    long long findMissing(long long a[], long long b[], int n)
+    {
+        // sorting array a[]
+       sort(a,a+n);
+       // sorting array b[]
+       sort(b,b+(n-1));
+       
+       for(int i = 0; i < n; i++)
+       {
+           // if number is same in index
+           if(a[i] == b[i])
+           {
+               continue;
+           }
+           // else return the number which is not equal to b[i]
+           else
+           {
+               return a[i];
+           }
+           
+       }
+        
+    }
+};
