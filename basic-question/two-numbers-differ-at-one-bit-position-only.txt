@@ -1,0 +1,24 @@
+class Solution{   
+public:
+    int DifferOne(long int a, long int b) { 
+        //complete the function here
+        // To  count number of bit differ in every postion of
+        // a and b.
+        int count = 0;
+        for(int i = 0; i < 32; i++)
+        {
+            // if any postition bit are not same in a & b
+            if((a & 1) != (b & 1))
+            {
+                count++;
+            }
+            // shifting a (Right)
+            a = a >> 1;
+            // shifting b (Right)
+            b = b >> 1;
+        }
+    
+        return (count == 1);
+        return 0;
+    }
+};
